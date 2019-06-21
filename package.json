@@ -1,12 +1,12 @@
 {
   "name": "bamazon",
   "version": "1.0.0",
-  "description": "hw assignment",
+  "description": "homework assignment",
   "main": "bamazonCustomer.js",
   "dependencies": {
-    "dotenv": "^7.0.0",
-    "inquirer": "^6.3.1",
-    "mysql": "^2.16.0"
+    "dotenv": "^8.0.0",
+    "inquirer": "^6.4.0",
+    "mysql": "github:mysqljs/mysql"
   },
   "devDependencies": {},
   "scripts": {
@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/bfpulliam/bamazon.git"
   },
-  "author": "BPulliam",
+  "author": "Bettina Pulliam",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bfpulliam/bamazon/issues"

@@ -54,45 +54,6 @@ function validateID(x) {
 	}
 }
 
-// function validatequantity(x) {
-// 	connection.query("SELECT item_id, product_name, inventory price FROM products WHERE item_id="+ x, function() {
-//     	if (parseInt(x) > inventory + 1) {
-//         console.log("Insufficient inventory!!");
-//         return false;
-//     	} else {
-//         console.log("Thank you for your purchase!");
-//         return true;
-// 		}
-// 	});
-// }
-
-// if (chosenItem.highest_bid < parseInt(answer.bid)) {
-// 	// bid was high enough, so update db, let the user know, and start over
-// 	connection.query(
-// 		"UPDATE auctions SET ? WHERE ?",
-// 		[
-// 			{
-// 				highest_bid: answer.bid
-// 			},
-// 			{
-// 				id: chosenItem.id
-// 			}
-// 		],
-// 		function (error) {
-// 			if (error) throw err;
-// 			console.log("Bid placed successfully!");
-// 			start();
-// 		}
-// 	);
-// }
-// else {
-// 	// bid wasn't high enough, so apologize and start over
-// 	console.log("Your bid was too low. Try again...");
-// 	start();
-// }
-//       });
-//   });
-
 // function which prompts the user for what action they should take
 function start() {
 	inquirer
@@ -108,24 +69,20 @@ function start() {
 				type: "input",
 				message: "How many do you want?",
 				name: "procure",
-				filter: Number
 
-			}]).then(function(stock_id, procure) {
-				var queryquantity = 'SELECT stock_quantity FROM products WHERE item_id=?' + stock_id;
-				connection.query(queryquantity, function () {
-					console.log("Inventory" + stock_quantity);
-
-					if (err) throw err;
-					if (parseInt(procure) < stock_quantity) {
-						var newQuanity = (inventory - stock_quantity);
-						connection.query("UPDATE products SET ? WHERE ?", [{
-							stock_quantity: newQuanity
-						}, {
-							item_id: product
-						}], function (err, res) { });
+			}]).then(function(user) {
+				connection.query("SELECT * FROM products WHERE item_id?", user.stock_id, function (err, res) {
+					if(user.procure > res[i].stock_quantity){
+						console.log("There are not enough items available.");
+						initBamazon();
 					} else {
-						console.log("Opps!");
+						console.log("You have purchased " + user.procure + " items.");
+						var newStock = (res[i].stock_quantity - user.procure);
+						connection.query("UPDATE products SET ? WHERE ?", [{stock_quantity: newStock}, {item_id: user.stock_id}]);
+						console.log("Thank you for your puchase.");
+						initBamazon();
 					}
+
 				});
 			});
 }
