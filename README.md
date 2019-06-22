@@ -10,9 +10,9 @@ of the selected item in stock to fulfill your purchase, the transaction will not
 ```
 ### Video Demo of Working App
 
-[In stock](captures\bamazonCustomer.js - bamazon - Visual Studio Code 6_22_2019 9_17_26 AM.mp4)
+[In stock](captures/bamazonCustomer.js - bamazon - Visual Studio Code 6_22_2019 9_17_26 AM.mp4)
 
-[Out of stock](captures\bamazonCustomer.js - bamazon - Visual Studio Code 6_22_2019 9_18_40 AM.mp4)
+[Out of stock](captures/bamazonCustomer.js - bamazon - Visual Studio Code 6_22_2019 9_18_40 AM.mp4)
 
 ### How to use the application
     Step 1: Run 'npm install' to install all the dependencies you will need.
