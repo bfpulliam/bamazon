@@ -4,14 +4,15 @@ Welcome to Bamazon!
 ```
 This is an Amazon-like storefront built with MySQL and Node.js.  This a CLI that works in the console.
 
-Within the portal, you can view the inventory and purchase items.  However, if we do not have enough of the selected item in stock to fulfill your purchase, the transaction will not go through.
+Within the portal, you can view the inventory and purchase items.  However, if we do not have enough 
+of the selected item in stock to fulfill your purchase, the transaction will not go through.
 
 ```
 ### Video Demo of Working App
 
-[In stock] (captures\bamazonCustomer.js - bamazon - Visual Studio Code 6_22_2019 9_17_26 AM.mp4)
+[In stock](captures\bamazonCustomer.js - bamazon - Visual Studio Code 6_22_2019 9_17_26 AM.mp4)
 
-[Out of stock] (captures\bamazonCustomer.js - bamazon - Visual Studio Code 6_22_2019 9_18_40 AM.mp4)
+[Out of stock](captures\bamazonCustomer.js - bamazon - Visual Studio Code 6_22_2019 9_18_40 AM.mp4)
 
 ### How to use the application
     Step 1: Run 'npm install' to install all the dependencies you will need.
