@@ -1,4 +1,4 @@
-# Bamazon     :package
+# Bamazon
 
 Welcome to Bamazon!
 ```
